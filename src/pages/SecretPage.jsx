@@ -602,7 +602,7 @@ const SecretPage = () => {
                 className="flex flex-col items-center gap-4"
               >
                 <motion.button
-                  onClick={() => navigate("/")}
+                  onClick={() => navigate("/Portfolio/")}
                   className="bg-gradient-to-r from-marker-blue to-marker-blue/80 text-white px-8 md:px-12 py-4 md:py-5 font-hand text-lg md:text-xl hover:from-marker-purple hover:to-marker-purple/80 transition-all shadow-2xl"
                   whileHover={{ scale: 1.05, y: -2 }}
                   whileTap={{ scale: 0.95 }}

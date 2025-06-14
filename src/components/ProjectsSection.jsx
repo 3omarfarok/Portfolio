@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         "This is a site to introduce the services that Dern-Support company offers to businesses and individuals. who can send requests for repairs and track the status of their devices.",
       tech: ["React", "Node.js", "MongoDB", "Tailwind"],
       image:
-        "src/assets/repair.png",
+        "/Portfolio/src/assets/repair.png",
       liveUrl: "https://dern-support-nine.vercel.app/",
       githubUrl: "https://github.com/3omarfarok/Dern-Support",
       color: "marker-blue",
@@ -27,7 +27,7 @@ const ProjectsSection = () => {
         'A company offering security solutions for homes and businesses using modern technologies, part of the BTEC "Person" diploma project.',
       tech: ["React", "Tailwind", "Vite"],
       image:
-        "src/assets/security.png",
+        "/Portfolio/src/assets/security.png",
       liveUrl: "https://3omarfarok.github.io/Berimbolo_Security/",
       githubUrl: "https://github.com/3omarfarok/Berimbolo_Security",
       color: "marker-green",
@@ -40,7 +40,7 @@ const ProjectsSection = () => {
         "A simple website for a fictional university where students register their data to participate in a university competition , There is also a dashboard for administrators only to control the contestants points.",
       tech: ["PHP", "SQL", "CSS3", "HTML5"],
       image:
-        "src/assets/uni.png",
+        "/Portfolio/src/assets/uni.png",
       liveUrl: "#",
       githubUrl: "https://github.com/3omarfarok/University-tournament",
       color: "marker-yellow",
