@@ -34,8 +34,8 @@ function App() {
             <Navigation />
             <FloatingDoodles />
             <Routes>
-              <Route path="/" element={<HomePage />} />
-              <Route path="/secret" element={<SecretPage />} />
+              <Route path="/Portfolio/" element={<HomePage />} />
+              <Route path="/Portfolio/secret" element={<SecretPage />} />
             </Routes>
           </motion.div>
         )}

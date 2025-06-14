@@ -197,7 +197,7 @@ const HeroSection = () => {
             <div className="relative w-80 md:w-96 lg:w-[400px] h-80 md:h-96 lg:h-[400px] flex items-center justify-center">
               {/* Character Image */}
               <motion.img
-                src="/src/assets/image.png"
+                src="/Portfolio/src/assets/image.png"
                 alt="Omar Farok - Developer Character"
                 className="w-full h-full object-contain animate-float"
                 style={{

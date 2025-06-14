@@ -17,14 +17,14 @@ const Navigation = () => {
   const handleSecretClick = () => {
     setSecretClicks(prev => prev + 1)
     if (secretClicks >= 6) {
-      navigate('/secret')
+      navigate('/Portfolio/secret')
       setSecretClicks(0)
     }
   }
 
   const scrollToSection = (sectionId) => {
     if (location.pathname !== '/') {
-      navigate('/')
+      navigate('/Portfolio/')
       setTimeout(() => {
         const element = document.getElementById(sectionId)
         if (element) {
