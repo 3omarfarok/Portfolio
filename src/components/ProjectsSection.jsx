@@ -14,7 +14,7 @@ const ProjectsSection = () => {
         "This is a site to introduce the services that Dern-Support company offers to businesses and individuals. who can send requests for repairs and track the status of their devices.",
       tech: ["React", "Node.js", "MongoDB", "Tailwind"],
       image:
-        "/Portfolio/src/assets/repair.png",
+        "/Portfolio/assets/repair.png",
       liveUrl: "https://dern-support-nine.vercel.app/",
       githubUrl: "https://github.com/3omarfarok/Dern-Support",
       color: "marker-blue",
