@@ -61,7 +61,7 @@ const SecretPage = () => {
       name: "Mostafa El-Nemr",
       title: "From Teacher to Colleague",
       description:
-        "Mr. Mostafa El-Nemr, my Physics teacher, was always supportive and encouraging throughout my journey. Today, after graduation, we’ve become almost like colleagues in the professional world — something I’m truly proud of",
+        "Mr. Mostafa El-Nemr, my Physics teacher, was always supportive and encouraging throughout my journey. Today, after graduation, we've become almost like colleagues in the professional world — something I'm truly proud of",
       color: "marker-orange",
       bgColor: "bg-marker-orange/10",
       icon: "⚛️",
@@ -189,19 +189,19 @@ const SecretPage = () => {
   return (
     <div className="min-h-screen bg-paper-50 relative overflow-hidden">
       {/* Notebook styling */}
-      <div className="absolute left-3 md:left-6 top-0 bottom-0 flex flex-col justify-center space-y-8 md:space-y-16 z-0">
+      <div className="absolute left-2 sm:left-3 md:left-6 top-0 bottom-0 flex flex-col justify-center space-y-6 sm:space-y-8 md:space-y-16 z-0">
         {[...Array(6)].map((_, i) => (
           <div
             key={i}
-            className="w-6 h-6 md:w-8 md:h-8 rounded-full bg-white border-2 border-gray-300 shadow-inner"
+            className="w-4 h-4 sm:w-6 sm:h-6 md:w-8 md:h-8 rounded-full bg-white border-2 border-gray-300 shadow-inner"
           ></div>
         ))}
       </div>
-      <div className="absolute left-12 md:left-20 top-0 bottom-0 w-0.5 bg-red-400 opacity-40 z-0"></div>
+      <div className="absolute left-8 sm:left-12 md:left-20 top-0 bottom-0 w-0.5 bg-red-400 opacity-40 z-0"></div>
 
       {/* Coffee stain */}
       <div
-        className="absolute top-16 md:top-24 right-8 md:right-24 w-12 h-12 md:w-20 md:h-20 rounded-full opacity-15 z-0"
+        className="absolute top-12 sm:top-16 md:top-24 right-4 sm:right-8 md:right-24 w-8 h-8 sm:w-12 sm:h-12 md:w-20 md:h-20 rounded-full opacity-15 z-0"
         style={{
           background:
             "radial-gradient(circle, rgba(139, 69, 19, 0.4) 0%, rgba(139, 69, 19, 0.2) 50%, transparent 70%)",
@@ -212,21 +212,21 @@ const SecretPage = () => {
       {/* Floating Quotes */}
       <AnimatePresence mode="wait">
         {showRoadmap && (
-          <div className="fixed top-10 right-4 z-50 max-w-xs">
+          <div className="fixed top-8 sm:top-6 md:top-10 right-2 sm:right-4 z-50 max-w-xs sm:max-w-sm">
             <motion.div
               key={currentQuoteIndex}
               initial={{ opacity: 0, y: -10 }}
               animate={{ opacity: 1, y: 0 }}
               exit={{ opacity: 0, y: 10 }}
               transition={{ duration: 0.5 }}
-              className="bg-marker-yellow text-pencil-600 p-3 relative shadow-lg"
+              className="bg-marker-yellow text-pencil-600 p-2 sm:p-3 relative shadow-lg"
               style={{
                 border: "2px solid #666",
                 borderRadius: "15px 5px 15px 5px",
                 transform: "rotate(-2deg)",
               }}
             >
-              <blockquote className="font-hand text-sm mb-2 leading-relaxed">
+              <blockquote className="font-hand text-xs sm:text-sm mb-2 leading-relaxed">
                 "{inspirationalQuotes[currentQuoteIndex]?.text}"
               </blockquote>
               <cite className="font-sketch text-xs opacity-80 not-italic">
@@ -238,15 +238,15 @@ const SecretPage = () => {
         )}
       </AnimatePresence>
 
-      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-4 pl-16 md:pl-24">
+      <div className="relative z-10 min-h-screen flex flex-col items-center justify-center p-2 sm:p-4 pl-12 sm:pl-16 md:pl-24">
         {/* Header */}
         <motion.div
           initial={{ opacity: 0, y: -30 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-center mb-12"
+          className="text-center mb-8 sm:mb-12"
         >
-          <h1 className="text-3xl md:text-5xl lg:text-6xl font-marker text-pencil-600 mb-6 hand-underline">
+          <h1 className="text-2xl sm:text-3xl md:text-5xl lg:text-6xl font-marker text-pencil-600 mb-4 sm:mb-6 hand-underline">
             Secret Page! 🎉
           </h1>
         </motion.div>
@@ -256,16 +256,16 @@ const SecretPage = () => {
           initial={{ opacity: 0 }}
           animate={{ opacity: 1 }}
           transition={{ duration: 0.5 }}
-          className="max-w-4xl mx-auto text-center mb-16"
+          className="max-w-xs sm:max-w-lg md:max-w-2xl lg:max-w-4xl mx-auto text-center mb-12 sm:mb-16"
         >
           <div
-            className="bg-paper-100 p-6 md:p-8 min-h-32 flex items-center justify-center relative"
+            className="bg-paper-100 p-4 sm:p-6 md:p-8 min-h-24 sm:min-h-32 flex items-center justify-center relative"
             style={{
               border: "2px solid #666",
               borderRadius: "15px 5px 15px 5px",
             }}
           >
-            <p className="text-lg md:text-xl lg:text-2xl font-hand text-pencil-600 leading-relaxed">
+            <p className="text-sm sm:text-lg md:text-xl lg:text-2xl font-hand text-pencil-600 leading-relaxed">
               {displayedText}
               <motion.span
                 animate={{ opacity: [1, 0] }}
@@ -284,19 +284,19 @@ const SecretPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 0.3, duration: 0.6 }}
-            className="w-full max-w-7xl mx-auto mb-20"
+            className="w-full max-w-7xl mx-auto mb-16 sm:mb-20"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-marker text-pencil-600 text-center mb-16 hand-underline">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-marker text-pencil-600 text-center mb-12 sm:mb-16 hand-underline px-4">
               My Mentorship Journey 🛤️
             </h2>
 
             {/* Timeline */}
-            <div className="relative px-4 md:px-8">
+            <div className="relative px-2 sm:px-4 md:px-8">
               {/* Timeline line */}
-              <div className="absolute left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-marker-yellow via-marker-blue to-marker-pink opacity-60 transform md:-translate-x-0.5"></div>
+              <div className="absolute left-6 sm:left-8 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-marker-yellow via-marker-blue to-marker-pink opacity-60 transform md:-translate-x-0.5"></div>
 
               {/* Mentor Cards */}
-              <div className="space-y-16 md:space-y-20">
+              <div className="space-y-12 sm:space-y-16 md:space-y-20">
                 {mentors.map((mentor, index) => (
                   <motion.div
                     key={mentor.name}
@@ -312,7 +312,7 @@ const SecretPage = () => {
                       initial={{ scale: 0 }}
                       animate={{ scale: 1 }}
                       transition={{ delay: 0.7 + index * 0.2, duration: 0.4 }}
-                      className={`absolute left-4 md:left-1/2 w-12 h-12 md:w-16 md:h-16 bg-gradient-to-br from-${mentor.color} to-${mentor.color}/70 rounded-full border-4 border-paper-50 shadow-xl z-10 flex items-center justify-center text-xl md:text-2xl transform md:-translate-x-1/2`}
+                      className={`absolute left-2 sm:left-4 md:left-1/2 w-8 h-8 sm:w-12 sm:h-12 md:w-16 md:h-16 bg-gradient-to-br from-${mentor.color} to-${mentor.color}/70 rounded-full border-4 border-paper-50 shadow-xl z-10 flex items-center justify-center text-sm sm:text-xl md:text-2xl transform md:-translate-x-1/2`}
                       style={{
                         boxShadow: "0 8px 32px rgba(0,0,0,0.2)",
                       }}
@@ -327,13 +327,13 @@ const SecretPage = () => {
                       transition={{ delay: 0.9 + index * 0.2, duration: 0.4 }}
                       className={`absolute ${
                         index % 2 === 0
-                          ? "left-20 md:left-1/2 md:ml-12"
-                          : "left-20 md:right-1/2 md:mr-12"
-                      } -top-4 md:-top-6 bg-gradient-to-r from-${
+                          ? "left-14 sm:left-20 md:left-1/2 md:ml-12"
+                          : "left-14 sm:left-20 md:right-1/2 md:mr-12"
+                      } -top-3 sm:-top-4 md:-top-6 bg-gradient-to-r from-${
                         mentor.color
                       } to-${
                         mentor.color
-                      }/80 text-pencil-600 px-4 py-2 text-sm md:text-base font-hand shadow-lg z-20`}
+                      }/80 text-pencil-600 px-2 sm:px-4 py-1 sm:py-2 text-xs sm:text-sm md:text-base font-hand shadow-lg z-20`}
                       style={{
                         border: "2px solid #666",
                         borderRadius: "20px 8px 20px 8px",
@@ -341,21 +341,21 @@ const SecretPage = () => {
                       }}
                     >
                       {mentor.year}
-                      <div className="absolute -bottom-1 left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-pencil-600"></div>
+                      <div className="absolute -bottom-1 left-2 sm:left-4 w-0 h-0 border-l-4 border-r-4 border-t-4 border-transparent border-t-pencil-600"></div>
                     </motion.div>
 
-                    {/* Mentor Card - Enhanced design without quotes */}
+                    {/* Mentor Card */}
                     <motion.div
-                      className={`w-full md:w-96 lg:w-[28rem] ${
+                      className={`w-full sm:w-full md:w-96 lg:w-[28rem] ${
                         index % 2 === 0
-                          ? "ml-20 md:ml-0 md:mr-auto md:pr-16"
-                          : "ml-20 md:ml-auto md:pl-16"
-                      } mt-8 md:mt-0 relative`}
+                          ? "ml-12 sm:ml-20 md:ml-0 md:mr-auto md:pr-16"
+                          : "ml-12 sm:ml-20 md:ml-auto md:pl-16"
+                      } mt-6 sm:mt-8 md:mt-0 relative`}
                       whileHover={{ y: -3 }}
                       transition={{ duration: 0.2 }}
                     >
                       <div
-                        className={`${mentor.bgColor} p-6 md:p-8 relative shadow-2xl`}
+                        className={`${mentor.bgColor} p-4 sm:p-6 md:p-8 relative shadow-2xl`}
                         style={{
                           border: "3px solid #666",
                           borderRadius: "25px 8px 25px 8px",
@@ -363,13 +363,13 @@ const SecretPage = () => {
                         }}
                       >
                         {/* Decorative elements */}
-                        <div className="absolute -top-2 -left-2 w-6 h-6 bg-marker-yellow rounded-full opacity-60"></div>
-                        <div className="absolute -bottom-2 -right-2 w-4 h-4 bg-marker-pink rounded-full opacity-60"></div>
+                        <div className="absolute -top-2 -left-2 w-4 h-4 sm:w-6 sm:h-6 bg-marker-yellow rounded-full opacity-60"></div>
+                        <div className="absolute -bottom-2 -right-2 w-3 h-3 sm:w-4 sm:h-4 bg-marker-pink rounded-full opacity-60"></div>
 
                         {/* Header */}
-                        <div className="flex items-start gap-4 mb-6">
+                        <div className="flex items-start gap-3 sm:gap-4 mb-4 sm:mb-6">
                           <div
-                            className={`w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-${mentor.color} to-${mentor.color}/70 rounded-2xl flex items-center justify-center text-2xl md:text-3xl shadow-lg flex-shrink-0`}
+                            className={`w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-${mentor.color} to-${mentor.color}/70 rounded-2xl flex items-center justify-center text-lg sm:text-2xl md:text-3xl shadow-lg flex-shrink-0`}
                             style={{
                               border: "3px solid #666",
                               transform: "rotate(3deg)",
@@ -377,33 +377,35 @@ const SecretPage = () => {
                           >
                             {mentor.icon}
                           </div>
-                          <div className="flex-1 pt-2">
-                            <h3 className="font-marker text-xl md:text-2xl lg:text-3xl text-pencil-600 mb-2 leading-tight">
+                          <div className="flex-1 pt-1 sm:pt-2">
+                            <h3 className="font-marker text-lg sm:text-xl md:text-2xl lg:text-3xl text-pencil-600 mb-1 sm:mb-2 leading-tight">
                               {mentor.name}
                             </h3>
-                            <h4 className="font-hand text-base md:text-lg text-pencil-500 leading-relaxed">
+                            <h4 className="font-hand text-sm sm:text-base md:text-lg text-pencil-500 leading-relaxed">
                               {mentor.title}
                             </h4>
                           </div>
                         </div>
 
-                        {/* Description - Enhanced */}
+                        {/* Description */}
                         <div
-                          className="bg-paper-50/50 p-4 md:p-5 rounded-xl border-l-4 border-pencil-400"
+                          className="bg-paper-50/50 p-3 sm:p-4 md:p-5 rounded-xl border-l-4 border-pencil-400"
                           style={{ borderRadius: "15px 5px 15px 5px" }}
                         >
-                          <p className="font-sketch text-pencil-500 text-sm md:text-base leading-relaxed">
+                          <p className="font-sketch text-pencil-500 text-xs sm:text-sm md:text-base leading-relaxed">
                             {mentor.description}
                           </p>
                         </div>
 
                         {/* Impact indicator */}
-                        <div className="mt-4 flex items-center justify-center">
+                        <div className="mt-3 sm:mt-4 flex items-center justify-center">
                           <div
-                            className="flex items-center gap-2 bg-marker-green/20 px-4 py-2 rounded-full"
+                            className="flex items-center gap-2 bg-marker-green/20 px-3 sm:px-4 py-1 sm:py-2 rounded-full"
                             style={{ border: "1px solid #666" }}
                           >
-                            <span className="text-sm">Impact Level:</span>
+                            <span className="text-xs sm:text-sm">
+                              Impact Level:
+                            </span>
                             <div className="flex gap-1">
                               {[...Array(5)].map((_, i) => (
                                 <motion.div
@@ -413,7 +415,7 @@ const SecretPage = () => {
                                   transition={{
                                     delay: 1.5 + index * 0.2 + i * 0.1,
                                   }}
-                                  className="w-2 h-2 bg-marker-green rounded-full"
+                                  className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-marker-green rounded-full"
                                 />
                               ))}
                             </div>
@@ -430,10 +432,10 @@ const SecretPage = () => {
                 initial={{ opacity: 0, scale: 0 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 3, duration: 0.6 }}
-                className="relative mt-20 text-center"
+                className="relative mt-16 sm:mt-20 text-center"
               >
                 <div
-                  className="absolute left-4 md:left-1/2 w-16 h-16 md:w-20 md:h-20 bg-gradient-to-br from-marker-yellow via-marker-pink to-marker-blue rounded-full border-4 border-paper-50 shadow-2xl flex items-center justify-center text-3xl md:text-4xl transform md:-translate-x-1/2"
+                  className="absolute left-2 sm:left-4 md:left-1/2 w-12 h-12 sm:w-16 sm:h-16 md:w-20 md:h-20 bg-gradient-to-br from-marker-yellow via-marker-pink to-marker-blue rounded-full border-4 border-paper-50 shadow-2xl flex items-center justify-center text-2xl sm:text-3xl md:text-4xl transform md:-translate-x-1/2"
                   style={{
                     border: "4px solid #666",
                   }}
@@ -441,16 +443,16 @@ const SecretPage = () => {
                   🎓
                 </div>
                 <div
-                  className="ml-24 md:ml-0 bg-gradient-to-br from-paper-100 to-paper-50 p-6 md:p-8 max-w-md mx-auto shadow-2xl"
+                  className="ml-16 sm:ml-24 md:ml-0 bg-gradient-to-br from-paper-100 to-paper-50 p-4 sm:p-6 md:p-8 max-w-md mx-auto shadow-2xl"
                   style={{
                     border: "3px solid #666",
                     borderRadius: "25px 8px 25px 8px",
                   }}
                 >
-                  <h3 className="font-marker text-xl md:text-2xl lg:text-3xl text-pencil-600 mb-4">
+                  <h3 className="font-marker text-lg sm:text-xl md:text-2xl lg:text-3xl text-pencil-600 mb-3 sm:mb-4">
                     The Journey Continues... ∞
                   </h3>
-                  <p className="font-sketch text-pencil-500 text-sm md:text-base leading-relaxed">
+                  <p className="font-sketch text-pencil-500 text-xs sm:text-sm md:text-base leading-relaxed">
                     Every day brings new learning opportunities and challenges.
                     The mentorship never truly ends! 🌟
                   </p>
@@ -466,20 +468,20 @@ const SecretPage = () => {
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
             transition={{ delay: 3.5, duration: 0.6 }}
-            className="w-full max-w-7xl mx-auto mb-20"
+            className="w-full max-w-7xl mx-auto mb-16 sm:mb-20"
           >
-            <h2 className="text-2xl md:text-3xl lg:text-4xl font-marker text-pencil-600 text-center mb-16 hand-underline">
+            <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-marker text-pencil-600 text-center mb-12 sm:mb-16 hand-underline px-4">
               My Little Friends 👥
             </h2>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 px-4 md:px-8">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8 px-2 sm:px-4 md:px-8">
               {littleFriends.map((friend, index) => (
                 <motion.div
                   key={friend.name}
                   initial={{ opacity: 0, y: 30 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ delay: 4 + index * 0.1, duration: 0.5 }}
-                  className={`bg-gradient-to-br from-${friend.color}/10 to-${friend.color}/20 p-6 relative shadow-xl group cursor-pointer`}
+                  className={`bg-gradient-to-br from-${friend.color}/10 to-${friend.color}/20 p-4 sm:p-6 relative shadow-xl group cursor-pointer`}
                   style={{
                     border: "3px solid #666",
                     borderRadius: "20px 8px 20px 8px",
@@ -488,7 +490,7 @@ const SecretPage = () => {
                 >
                   {/* Friend Icon */}
                   <div
-                    className={`w-16 h-16 bg-gradient-to-br from-${friend.color} to-${friend.color}/70 rounded-2xl flex items-center justify-center text-2xl shadow-lg mb-4 mx-auto`}
+                    className={`w-12 h-12 sm:w-16 sm:h-16 bg-gradient-to-br from-${friend.color} to-${friend.color}/70 rounded-2xl flex items-center justify-center text-xl sm:text-2xl shadow-lg mb-3 sm:mb-4 mx-auto`}
                     style={{
                       border: "3px solid #666",
                       transform: "rotate(-3deg)",
@@ -499,23 +501,23 @@ const SecretPage = () => {
 
                   {/* Friend Info */}
                   <div className="text-center">
-                    <h3 className="font-marker text-lg md:text-xl text-pencil-600 mb-2">
+                    <h3 className="font-marker text-base sm:text-lg md:text-xl text-pencil-600 mb-1 sm:mb-2">
                       {friend.name}
                     </h3>
-                    <h4 className="font-hand text-sm md:text-base text-pencil-500 mb-3">
+                    <h4 className="font-hand text-xs sm:text-sm md:text-base text-pencil-500 mb-2 sm:mb-3">
                       {friend.title}
                     </h4>
-                    <p className="font-sketch text-pencil-500 text-xs md:text-sm leading-relaxed">
+                    <p className="font-sketch text-pencil-500 text-xs sm:text-xs md:text-sm leading-relaxed">
                       {friend.description}
                     </p>
                   </div>
 
                   {/* Decorative elements */}
-                  <div className="absolute -top-2 -right-2 w-6 h-6 bg-marker-yellow rounded-full opacity-0 group-hover:opacity-60 transition-opacity"></div>
-                  <div className="absolute -bottom-2 -left-2 w-4 h-4 bg-marker-pink rounded-full opacity-0 group-hover:opacity-60 transition-opacity"></div>
+                  <div className="absolute -top-2 -right-2 w-4 h-4 sm:w-6 sm:h-6 bg-marker-yellow rounded-full opacity-0 group-hover:opacity-60 transition-opacity"></div>
+                  <div className="absolute -bottom-2 -left-2 w-3 h-3 sm:w-4 sm:h-4 bg-marker-pink rounded-full opacity-0 group-hover:opacity-60 transition-opacity"></div>
 
                   {/* Friendship indicator */}
-                  <div className="absolute top-2 left-2 text-lg opacity-60">
+                  <div className="absolute top-2 left-2 text-base sm:text-lg opacity-60">
                     🤝
                   </div>
                 </motion.div>
@@ -527,27 +529,27 @@ const SecretPage = () => {
               initial={{ opacity: 0, y: 30 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ delay: 4.8, duration: 0.6 }}
-              className="text-center mt-12"
+              className="text-center mt-8 sm:mt-12 px-4"
             >
               <div
-                className="bg-gradient-to-br from-marker-blue/10 to-marker-purple/10 p-6 md:p-8 max-w-2xl mx-auto shadow-xl"
+                className="bg-gradient-to-br from-marker-blue/10 to-marker-purple/10 p-4 sm:p-6 md:p-8 max-w-2xl mx-auto shadow-xl relative"
                 style={{
                   border: "3px solid #666",
                   borderRadius: "25px 8px 25px 8px",
                 }}
               >
-                <blockquote className="font-hand text-lg md:text-xl text-pencil-600 italic mb-4">
+                <blockquote className="font-hand text-base sm:text-lg md:text-xl text-pencil-600 italic mb-3 sm:mb-4">
                   "Shout out to everyone else I Know 🌟"
                 </blockquote>
-                <cite className="font-sketch text-pencil-400 text-sm">
+                <cite className="font-sketch text-pencil-400 text-xs sm:text-sm">
                   - Warm Greetings
                 </cite>
 
                 {/* Quote decorations */}
-                <div className="absolute -top-3 -left-3 text-3xl text-marker-blue opacity-30 font-serif">
+                <div className="absolute -top-3 -left-3 text-2xl sm:text-3xl text-marker-blue opacity-30 font-serif">
                   "
                 </div>
-                <div className="absolute -bottom-3 -right-3 text-3xl text-marker-blue opacity-30 font-serif">
+                <div className="absolute -bottom-3 -right-3 text-2xl sm:text-3xl text-marker-blue opacity-30 font-serif">
                   "
                 </div>
               </div>
@@ -561,25 +563,25 @@ const SecretPage = () => {
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 5, duration: 0.6 }}
-            className="w-full max-w-6xl mx-auto mt-20 mb-12"
+            className="w-full max-w-6xl mx-auto mt-16 sm:mt-20 mb-8 sm:mb-12"
           >
-            <div className="flex flex-col lg:flex-row items-center justify-between gap-8 px-4">
+            <div className="flex flex-col lg:flex-row items-center justify-between gap-6 sm:gap-8 px-2 sm:px-4">
               {/* Thank you note */}
               <motion.div
                 initial={{ opacity: 0, scale: 0.9 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ delay: 5.2, duration: 0.4 }}
-                className="bg-gradient-to-br from-marker-pink to-marker-pink/80 p-6 md:p-8 shadow-2xl max-w-lg"
+                className="bg-gradient-to-br from-marker-pink to-marker-pink/80 p-4 sm:p-6 md:p-8 shadow-2xl max-w-lg w-full"
                 style={{
                   border: "3px solid #666",
                   borderRadius: "25px 8px 25px 8px",
                   transform: "rotate(-1deg)",
                 }}
               >
-                <div className="flex items-start gap-4 mb-4">
-                  <div className="text-3xl">🙏</div>
+                <div className="flex items-start gap-3 sm:gap-4 mb-3 sm:mb-4">
+                  <div className="text-2xl sm:text-3xl">🙏</div>
                   <div>
-                    <h3 className="font-marker text-xl md:text-2xl text-pencil-600 mb-2">
+                    <h3 className="font-marker text-lg sm:text-xl md:text-2xl text-pencil-600 mb-1 sm:mb-2">
                       Special Thanks! ✨
                     </h3>
                     <p className="font-hand text-pencil-600 text-base md:text-lg font-semibold mb-3">
@@ -591,7 +593,6 @@ const SecretPage = () => {
                   Each mentor and friend represents a lesson that changed my
                   perspective and helped me grow as a developer and as a person.
                 </p>
-                <div className="absolute -top-3 -right-3 text-2xl">📌</div>
               </motion.div>
 
               {/* Back Button */}
